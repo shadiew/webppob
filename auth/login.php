@@ -73,7 +73,7 @@ require '../lib/header_home.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Login</title>
+    <title>Login | <?php echo $data['title']; ?></title>
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="<?php echo $config['web']['url'] ?>mobile/images/logo.png" />
     <link rel="apple-touch-icon-precomposed" href="<?php echo $config['web']['url'] ?>mobile/images/logo.png" />
@@ -100,7 +100,7 @@ require '../lib/header_home.php';
     <!-- /preload -->    
     <div class="mt-7 login-section">
         <div class="tf-container">
-            <form class="tf-form" method="POST">
+            <form class="tf-form" method="POST" autocomplete="off">
                 <input type="hidden" name="csrf_token" value="<?php echo $config['csrf_token'] ?>">
                     <h1>Login</h1>
                     <div class="group-input">
